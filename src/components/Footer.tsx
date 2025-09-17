@@ -195,6 +195,45 @@ export const Footer: FC = () => {
         </HStack>
       </HStack>
 
+      {/* Download App CTA Section */}
+      <section id="download-app" className="py-8 bg-white w-full">
+        <div className="najiz-container">
+          <div className="flex flex-col items-center" dir="rtl">
+            <div className="w-full mb-6 text-center">
+              <div className="flex justify-center mb-2">
+            
+              </div>
+              <h2 className="text-2xl font-bold text-lsc-darkBlue mb-3">حمل تطبيق مساندة الآن</h2>
+              <p className="text-gray-600 text-sm md:text-base mb-4">
+                يمكنكم تحميل تطبيق مسانده للأجهزه الذكية التي تعمل بنظامي أندرويد و أيفون
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a href="https://apps.apple.com/us/app/lsc-legal-support-center/id6748060221?platform=iphone" className="flex items-center justify-center">
+                  <Image
+                    src="/3536cd21-b715-428d-9938-52a560f64a5c.png"
+                    alt="App Store"
+                    w={{ base: "120px", md: "140px" }}
+                    h="auto"
+                    objectFit="contain"
+                  />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.naif.lsc&pli=1" className="flex items-center justify-center">
+                  <Image
+                    src="/66d05f17-7b10-472a-a83b-c3baf7ca79ac.png"
+                    alt="Google Play"
+                    w={{ base: "120px", md: "140px" }}
+                    h="auto"
+                    objectFit="contain"
+                  />
+                </a>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
+
       <HStack
         bgColor={"#461417"}
         color={"white"}

@@ -82,16 +82,15 @@ export const Header = () => {
                 </HStack>
 
 
-                {/* Desktop Nav + Search + Login */}
-                {!isMobileOrTablet && (
+                {/* Desktop Login (hidden) */}
+                {false && !isMobileOrTablet && (
                     <Box p={"1rem"} gap={"10px"} borderRadius={'1rem'}
                         onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
                         bgColor={"#5A77BB"} color={"white"}
                         _hover={{ cursor: "pointer", transform: "scale(1.02)" }}
                     >                 
-{
-    lang ? 'Login' : 'تسجيل الدخول'
-}                    </Box>
+{ lang ? 'Login' : 'تسجيل الدخول' }
+                    </Box>
                 )}
 
                 {/* Mobile Hamburger */}
@@ -140,14 +139,15 @@ export const Header = () => {
                     boxShadow="md"
                 >
                     <Navbar />
-                    {/* Login Button */}
-                    <Box p={"1rem"}
-                        onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
-                        gap={"10px"} borderRadius={'1rem'} bgColor={"#5A77BB"} color={"white"}
-                    >
-                        {/* {loginText} */}
-                        تسجيل الدخول
-                    </Box>
+                    {/* Mobile Login (hidden) */}
+                    {false && (
+                      <Box p={"1rem"}
+                          onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
+                          gap={"10px"} borderRadius={'1rem'} bgColor={"#5A77BB"} color={"white"}
+                      >
+                          تسجيل الدخول
+                      </Box>
+                    )}
                 </VStack>
             )}
         </HStack>
