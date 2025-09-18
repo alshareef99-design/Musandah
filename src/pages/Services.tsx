@@ -48,7 +48,7 @@ export const Services = () => {
           fontSize={{ base: "1.25rem", lg: "1.75rem" }}
           mb={"2rem"}
         >
-          {lang === "ar" ? " خدماتنا عبارة عن باقات تواكب احتياجك، لا تُجزّئه" : "Our Package is a response to your needs, it is not a one-size-fits-all solution"}   </Text>
+          {lang === "ar" ? "خدماتنا عبارة عن باقات توفي كل احتياجاتك، لا تُجزّئها." : "Our Package is a response to your needs, it is not a one-size-fits-all solution"}   </Text>
 
         <HStack
           flexDir={{ base: "column", lg: "row" }}
@@ -324,7 +324,7 @@ export const Services = () => {
               fontWeight={400}
               fontSize={{ base: "0.9rem", lg: "1.25rem" }}
             >
-               {lang === "ar" ?" نعمل حاليًا على تطوير باقات جديدة تخدم:" :"We are currently working on new packages that serve:"}
+               {lang === "ar" ?" لكننا نعمل حاليًا على تطوير باقات جديدة تخدم:" :"We are currently working on new packages that serve:"}
             </Text>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -333,7 +333,7 @@ export const Services = () => {
                   fontWeight={400}
                   fontSize={{ base: "0.8rem", lg: "1.1rem" }}
                 >
-                 {lang === "ar" ? " أصحاب الأعمال والمشاريع الناشئة" :"Entrepreneurs and small business owners"}
+                 {lang === "ar" ? " أصحاب الأعمال والمشاريع" :"Entrepreneurs and small business owners"}
                 
                 </Text>
             </HStack>
@@ -375,6 +375,18 @@ export const Services = () => {
             </Text>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+              <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                >
+{
+                   lang === "ar" ? " المرافعات والتقاضي" :"Contract drafting and legal review for commercial needs"
+}                </Text>
+</HStack>
+
+<HStack>
+<Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
              <Text
                   color={"rgba(95, 97, 102, 1)"}    
                   fontWeight={400}
@@ -383,6 +395,7 @@ export const Services = () => {
 {
                    lang === "ar" ? " مراجعة وصياغة العقود التجارية" :"Contract drafting and legal review for commercial needs"
 }                </Text>
+
             </HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
@@ -394,6 +407,17 @@ export const Services = () => {
                  {lang === "ar" ? "خدمات التحكيم والتسوية" : "Arbitration and dispute resolution" }
                 </Text>
             </HStack>
+            <HStack>
+              <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
+              <Text
+                  color={"rgba(95, 97, 102, 1)"}    
+                  fontWeight={400}
+                  fontSize={{ base: "0.8rem", lg: "1.1rem" }}
+                >
+{
+                   lang === "ar" ? " التمثيل الكامل أمام المحاكم " :"Contract drafting and legal review for commercial needs"
+}                </Text>
+</HStack>
             <HStack>
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
              <Text

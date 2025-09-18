@@ -14,7 +14,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveLink } from "@/store/slices/navSlice";
 import type { RootState } from "@/store";
@@ -170,25 +170,31 @@ export const Footer: FC = () => {
             <HStack>
               <FaFacebookF />
               <Text fontSize="1rem" fontWeight="400">
-                mosanda qanonia
+              musanadaksa
               </Text>
             </HStack>
             <HStack>
               <FaInstagram />
               <Text fontSize="1rem" fontWeight="400">
-                mosanda_qanonia
+              musanada.sa
               </Text>
             </HStack>
             <HStack>
               <FaXTwitter />
               <Text fontSize="1rem" fontWeight="400">
-                mosanda_qanonia
+              musanadasa
               </Text>
             </HStack>
             <HStack>
               <FaLinkedinIn />
               <Text fontSize="1rem" fontWeight="400">
-                mosanda qanonia
+              musanadahsa
+              </Text>
+            </HStack>
+            <HStack>
+              <FaTiktok />
+              <Text fontSize="1rem" fontWeight="400">
+              musanada.sa
               </Text>
             </HStack>
           </VStack>

@@ -41,7 +41,7 @@ export const FrequentQuestions = () => {
         subtitle=""
         description=""
       />
-      <Text
+      {/* <Text
         fontSize={{ base: "1.25rem", lg: "1.5rem" }}
         color={"rgba(46, 54, 81, 1)"}
       >
@@ -50,7 +50,7 @@ export const FrequentQuestions = () => {
           "كل ما يشغلك… نجيبك عنه ببساطة ووضوح."}
       </Text>
 
-      <FaqAccordion items={faq} />
+      <FaqAccordion items={faq} /> */}
     </VStack>
   );
 };

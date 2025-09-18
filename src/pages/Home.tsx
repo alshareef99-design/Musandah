@@ -348,9 +348,9 @@ export const Home = () => {
           fontSize={{ base: "1rem", md: "1.1rem" }}
         >
           {
-            lang === "ar" ? `
-          في مساندة، صممنا باقات قانونية تغطي احتياجاتك المختلفة — من دعم أساسي
-          إلى تغطية شاملة. اختر الباقة التي تناسبك، وكن دائمًا في أمان قانوني.` :
+            lang === "ar" ? `في مركز المساندة القانونية، نوفر لك باقات قانونية مصممة لتلائم احتياجاتك.
+اختر الباقة التي تناسبك.. وابق دائمًا في أمان قانوني
+` :
               `
           At Musanadah, we have designed legal packages that cover your various needs — from basic support to comprehensive coverage. Choose the package that suits you and always be legally secure.`
           }
@@ -380,11 +380,15 @@ export const Home = () => {
           justifyContent="center"
           gap={"1.5rem"}
         >
-          <Text fontSize={{ base: "1.4rem", md: "1.75rem" }} fontWeight={500}>
+          <Text fontSize={{ base: "1.4rem", md: "1.75rem" }} fontWeight={500} whiteSpace="pre-line">
             {
-              lang === "ar" ? `
-            مساندة" ليست مجرد منصة…بل رفيقك القانوني الرقمي، الذي صُمّم ليكون في
-            صفك.` : `
+              lang === "ar" ? `مركز المساندة القانونية.. ليس مجرد منصة، بل رفيقك القانوني الرقمي، المصمم ليكون دائمًا في صفك.
+
+ابدأ رحلتك القانونية بثقة.. من هنا نبدأ بساندتك.
+
+استشارات قانونية،أمان قانوني طوال العام.. كل ذلك بخطوات بسيطة بالطريقة التي تناسبك.
+
+كل ما تحتاجه في جيبك.` : `
             Musanadah is not just a platform... but your digital legal companion, designed to be on your side.`
             }
           </Text>
@@ -442,7 +446,7 @@ export const Home = () => {
               fontSize={{ base: "1.25rem", lg: "1.75rem" }}
               color={"rgba(46, 54, 81, 1)"}
             >
-              {useTranslation("shared.mission")}
+              {lang === "ar" ? "الوعي القانوني هو خط دفاعك الأول." : useTranslation("shared.mission")}
             </Text>
             <svg
               viewBox="0 0 471 21"
@@ -463,17 +467,15 @@ export const Home = () => {
             fontWeight={500}
             color={"rgba(90, 119, 187, 1)"}
           >
-            {
-              useTranslation("home.infopart.subtitle1")
-            }          </Text>
+            {lang === "ar" ? "في مركز المساندة القانونية، لا نمنحك حلول واستشارات قانونية فقط، بل نحرص أن تفهم الصورة كاملة، تعرف حقوقك مسبقًا، وتتخذ قراراتك بثقة." : useTranslation("home.infopart.subtitle1")}
+          </Text>
           <Text
             fontSize={"1.15rem"}
             fontWeight={400}
             color={"rgba(95, 97, 102, 1)"}
+            whiteSpace="pre-line"
           >
-            {
-              useTranslation("home.infopart.subtitle2")
-            }
+            {lang === "ar" ? "صممنا منصتنا لتكون قريبة منك: لغة بسيطة، أمثلة واقعية، وشرح واضح لا يحتاج خلفية قانونية." : useTranslation("home.infopart.subtitle2")}
           </Text>
         </VStack>
         <VStack w={"90%"} align={"center"}>
@@ -491,7 +493,7 @@ export const Home = () => {
               navigate("/knowledge-center");
             }}
           >
-            {useTranslation("shared.discoverknowledge")}
+            {lang === "ar" ? "اكتشف مركز المساندة القانونية الآن…" : useTranslation("shared.discoverknowledge")}
           </Box>
         </VStack>
       </VStack>

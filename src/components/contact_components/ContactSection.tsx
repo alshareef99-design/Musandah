@@ -7,16 +7,18 @@ import {
   Circle,
   Group,
   Input,
+  Link,
   Portal,
   Select,
   Field,
 } from "@chakra-ui/react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "@/store/slices/languageSlice";
+
 
 
 export const ContactSection = ()=>{
@@ -65,6 +67,7 @@ export const ContactSection = ()=>{
         minH="60vh"
         align={"start"}
         color={"rgba(46, 54, 81, 1)"}
+        dir={lang === 'ar' ? 'rtl' : 'ltr'}
       >
         {/* Overlay */}
         <Box
@@ -80,8 +83,8 @@ export const ContactSection = ()=>{
           // maxW={{ base: "90vw", md: "100vw" }}
           zIndex={3}
           justifyContent={"space-between"}
-          align={"Start"}
-          w={"100vw"}
+          align={"start"}
+          w={"100%"}
           p={2}
         >
           <VStack>
@@ -110,41 +113,57 @@ export const ContactSection = ()=>{
             </Box>
           </VStack>
           <VStack align={"start"} gap={4}>
-            <Text fontSize={"1.1rem"} fontWeight={400}>
-              {useTranslation("shared.ContactsubTitle")}
-            </Text>
+            {useTranslation("shared.ContactsubTitle")
+              .split("\n")
+              .filter((l) => l.trim().length > 0)
+              .map((line, idx) => {
+                const isBullet = line.trim().startsWith("•");
+                const content = isBullet ? line.replace(/^\s*•\s*/, "") : line;
+                return isBullet ? (
+                  <HStack key={`intro-bullet-${idx}`}>
+                    <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
+                    <Text fontSize={"1.1rem"} fontWeight={300}>{content}</Text>
+                  </HStack>
+                ) : (
+                  <Text key={`intro-text-${idx}`} fontSize={"1.1rem"} fontWeight={400}>
+                    {content}
+                  </Text>
+                );
+              })}
+
+            {/* How can we help you? */}
+            <VStack align={"start"} gap={2}>
+              <Text color="rgba(90, 119, 187, 1)">
+                {useTranslation("shared.ContactHow")}
+              </Text>
+              {useTranslation("shared.ContactHowItems")
+                .split("\n")
+                .filter((l) => l.trim().length > 0)
+                .map((line, idx) => (
+                  <HStack key={`how-${idx}`}>
+                    <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
+                    <Text fontWeight={300}>{line}</Text>
+                  </HStack>
+                ))}
+            </VStack>
             <HStack
               align={"start"}
               gap={4}
               flexDir={{ base: "column", lg: "row" }}
             >
-              <Text color="rgba(90, 119, 187, 1)" > {
-                lang === "ar"? "متى تتواصل معنا؟"  : "When should you contact us?"}</Text>
+              <Text color="rgba(90, 119, 187, 1)">
+                {useTranslation("shared.WhenToContact")}
+              </Text>
               <VStack align={"start"}>
-                <HStack>
-                  <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
-                  <Text fontWeight={300} > {lang === "ar" ? "إذا كنت غير متأكد أي باقة تناسبك"  : "If you are not sure which package is right for you"}</Text>
-                </HStack>
-                <HStack>
-                  <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
-                  <Text fontWeight={300}>
-                    {lang === "ar" ? "إذا واجهت مشكلة في التسجيل أو الدخول" :" If you face a registration or login issue"} 
-                  </Text>
-                </HStack>
-              </VStack>
-              <VStack align={"start"}>
-                <HStack>
-                  <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
-                  <Text fontWeight={300}>
-                    {lang === "ar" ? " إذا كنت بحاجة لتوضيح قانوني عام قبل بدء اشتراكك"  : "If you need a general legal explanation before starting your subscription"}
-                  </Text>
-                </HStack>
-                <HStack>
-                  <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
-                  <Text fontWeight={300}>
-                    {lang === "ar" ? "أو ببساطة... إن أردت أن تطمئن أنك في المكان الصحيح"  : " Or simply... if you want to make sure you are at right place"}
-                  </Text>
-                </HStack>
+                {useTranslation("shared.WhenToContactItems")
+                  .split("\n")
+                  .filter((l) => l.trim().length > 0)
+                  .map((line, idx) => (
+                    <HStack key={`when-${idx}`}>
+                      <Circle size={"10px"} bgColor={"rgba(152, 28, 32, 1)"} />
+                      <Text fontWeight={300}>{line}</Text>
+                    </HStack>
+                  ))}
               </VStack>
             </HStack>
           </VStack>
@@ -281,7 +300,7 @@ export const ContactSection = ()=>{
                   color={"rgba(95, 97, 102, 1)"}
                 >
                   {" "}
-                  contact@mosandawork.com
+                  support@lsc-sa.net
                 </Text>
               </Box>
 
@@ -291,6 +310,13 @@ export const ContactSection = ()=>{
                 </Text>
                 <HStack>
                   <Box gap={"1rem"}>
+                  <Link 
+                  href="https://www.facebook.com/musanadaksa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  _hover={{ transform: "scale(1.1)", transition: "transform 0.2s" }}
+                >
+
                     <Circle
                       border={"2px solid"}
                       bg="transparent"
@@ -298,8 +324,16 @@ export const ContactSection = ()=>{
                     >
                       <FaFacebookF className=" social-icon" size={"1.5rem"} />
                     </Circle>{" "}
+                    </Link>
+
                   </Box>
                   <Box>
+                  <Link 
+                  href="https://www.instagram.com/musanada.sa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  _hover={{ transform: "scale(1.1)", transition: "transform 0.2s" }}
+                >
                     <Circle
                       border={"2px solid"}
                       bg="transparent"
@@ -307,8 +341,15 @@ export const ContactSection = ()=>{
                     >
                       <FaInstagram className=" social-icon" size={"1.5rem"} />
                     </Circle>{" "}
+                    </Link>
                   </Box>
                   <Box>
+                  <Link 
+                  href="https://x.com/musanadasa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  _hover={{ transform: "scale(1.1)", transition: "transform 0.2s" }}
+                >
                     <Circle
                       border={"2px solid"}
                       bg="transparent"
@@ -316,8 +357,15 @@ export const ContactSection = ()=>{
                     >
                       <FaXTwitter className=" social-icon" size={"1.5rem"} />
                     </Circle>{" "}
+                    </Link>
                   </Box>
                   <Box>
+                  <Link 
+                  href="https://www.linkedin.com/company/musanadahsa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  _hover={{ transform: "scale(1.1)", transition: "transform 0.2s" }}
+                >
                     <Circle
                       border={"2px solid"}
                       bg="transparent"
@@ -325,6 +373,23 @@ export const ContactSection = ()=>{
                     >
                       <FaLinkedinIn className=" social-icon" size={"1.5rem"} />
                     </Circle>{" "}
+                    </Link>
+                  </Box>
+                  <Box>
+                  <Link 
+                  href="https://www.tiktok.com/@musanada.sa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  _hover={{ transform: "scale(1.1)", transition: "transform 0.2s" }}
+                >
+                    <Circle
+                      border={"2px solid"}
+                      bg="transparent"
+                      size={"3.5rem"}
+                    >
+                      <FaTiktok className=" social-icon" size={"1.5rem"} />
+                    </Circle>{" "}
+                    </Link>
                   </Box>
                 </HStack>{" "}
               </Box>
@@ -348,10 +413,14 @@ export const ContactSection = ()=>{
                     fill="#2E3651"
                   />
                 </svg>
-                <Text>
-                  {useTranslation("shared.respect")}
+                <Text fontWeight={600}>
+                  {lang === 'ar' ? 'تذكير:' : 'Reminder:'}
+                </Text>
+                <Text whiteSpace="pre-line">
+                  {`${useTranslation("shared.respect")}\n\n${useTranslation("shared.ContactCTA")}`}
                 </Text>
               </HStack>
+
             </VStack>
           </HStack>
         </VStack>

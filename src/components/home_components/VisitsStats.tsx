@@ -64,7 +64,7 @@ export const VisitsStats = () => {
         <Text fontSize={{ base: "1rem", lg: "1.3rem" }}>
           {lang === "en"
             ? "Join Musanadah now, be aware of your rights, ready to defend them, at the right time and place."
-            : "          انضم الآن إلى مساندة، وكن على دراية بحقوقك، مستعدًا للدفاع عنها، في الوقت والمكان المناسبين." }
+            : "انضم الآن إلى مركز المساندة القانونية.. لتكون على اطلاع دائم بحقوقك وواجباتك، ولي تعرف ما تحتاجه، في الوقت والمكان المناسبين لك." }
         </Text>
         <Box
           as="button"
@@ -73,7 +73,7 @@ export const VisitsStats = () => {
           bgColor={"rgba(90, 119, 187, 1)"}
           onClick={() => window.open('https://portal.lsc-sa.net/', '_blank')}
         >
-{          lang === "en" ? "Join now" : "انضم الان" }
+{          lang === "en" ? "Join now" : "انضم الآن" }
         </Box>
       </VStack>
     </HStack>

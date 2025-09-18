@@ -31,7 +31,7 @@ export const LangToggle = () => {
                     <Box
                         _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
                         width={'auto'} gap={'0.5rem'} display={'flex'} flexDir={'row'}>
-                        {currentLanguage === 'en' ? (
+                        {/* {currentLanguage === 'en' ? (
                             <>
                                 English <MdOutlineKeyboardArrowDown size={'1.5rem'} />
                             </>
@@ -41,7 +41,9 @@ export const LangToggle = () => {
                                 العربية
 
                             </>
-                        )}
+                        )} */}
+                                 <MdOutlineKeyboardArrowDown size={'1.5rem'} />
+                                 العربية
                     </Box>
                 </Menu.Trigger>
 
@@ -49,15 +51,15 @@ export const LangToggle = () => {
                     <Menu.Positioner>
                         <Menu.Content>
                             <Menu.Item
-                                value="en"
-                                onClick={() => 
-                                    // InfoToaster()
-                                    dispatch(setLanguage('en'))
-                                }
-                            >
-                                English
-                            </Menu.Item>
-                            <Menu.Item
+                            //     value="en"
+                            //     onClick={() => 
+                            //         // InfoToaster()
+                            //         dispatch(setLanguage('en'))
+                            //     }
+                            // >
+                            //     English
+                            // </Menu.Item>
+                            // <Menu.Item
                                 value="ar"
                                 onClick={() => dispatch(setLanguage('ar'))}
                             >
