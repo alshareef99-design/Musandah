@@ -305,6 +305,29 @@ export const ContactSection = ()=>{
               </Box>
 
               <Box textAlign={"start"}>
+                <Box>
+                  <Text p={4}>{useTranslation("shared.phone")}</Text>
+                  <Text
+                    p={4}
+                    fontSize={"1rem"}
+                    fontWeight={300}
+                    color={"rgba(95, 97, 102, 1)"}
+                  >
+                    {lang === 'ar' ? 'تواصل معنا مباشرة على الرقم التالي' : 'Contact us directly on the following number'}
+                  </Text>
+                </Box>
+                <Text
+                  p={4}
+                  fontSize={"1rem"}
+                  fontWeight={500}
+                  color={"rgba(95, 97, 102, 1)"}
+                >
+                  {" "}
+                  {useTranslation("shared.phoneNumber")}
+                </Text>
+              </Box>
+
+              <Box textAlign={"start"}>
                 <Text p={4} fontWeight={600}>
                   {useTranslation("shared.followus")}
                 </Text>

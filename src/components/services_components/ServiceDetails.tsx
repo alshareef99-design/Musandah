@@ -57,6 +57,7 @@ export const ServiceDetails = () => {
             alt={filteredPlan?.title.en}
             w="6rem"
             h="8.5rem"
+            objectFit="contain"
           />
           <VStack w={"100%"} align={"start"} gap={"2rem"}>
             <HStack w={"100%"} align={"stretch"} flexDir={{ base: "column", md: "row" }}>
@@ -80,6 +81,7 @@ export const ServiceDetails = () => {
                 align="start"
                 bgColor={"rgba(247, 248, 252, 1)"}
                 w={{ base: "100%", md: "50%" }}
+                display="none"
               >
             <Text color={"rgba(46, 54, 81, 1)"}> { lang === "en" ? filteredPlan?.title?.en + " matches" : filteredPlan?.title?.ar + " تناسب "} :</Text>
                 {filteredPlan?.whofor.map((whofor, index) => (

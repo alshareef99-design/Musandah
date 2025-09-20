@@ -18,6 +18,7 @@ const initialState: NavState = {
   links: [
     { href: "/", label: "Home",en: "Home", ar: "الرئيسية" },
     { href: "/about", label: "About", en: "About", ar: "من نحن" },
+    { href: "/why-us", label: "Why Us", en: "Why Us", ar: "لماذا نحن" },
     { href: "/services", label: "Services", en: "Services", ar: "خدماتنا" },
     { href: "/knowledge-center", label: "Knowledge Center", en: "Knowledge Center", ar: "مركز المعرفة" },
     // { href: "/blogs", label: "Blogs", en: "Blogs", ar: "المدونات" },

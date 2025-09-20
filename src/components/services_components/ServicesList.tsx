@@ -82,7 +82,7 @@ export const plans: PlanProbs[] = [
       en: "The Gold Plan provides comprehensive legal coverage throughout the year with maximum flexibility.",
       ar: "الباقة الذهبية تمنحك تغطية قانونية شاملة طوال العام بأقصى مرونة",
     },
-    Image: "goldshield.png",
+    Image: "Subscription Gold.png",
   },
   {
     ref: "silver-plan",
@@ -148,7 +148,7 @@ export const plans: PlanProbs[] = [
       en: "The Silver Plan offers year-long legal peace of mind with balanced pricing and professional service.",
       ar: "الباقة الفضية تمنحك الطمأنينة القانونية طوال العام بسعر متوازن وخدمة محترفة.",
     },
-    Image: "silvershield.png",
+    Image: "Subscription Silver.png",
   },
   {
     ref: "bronze-plan",
@@ -214,6 +214,6 @@ export const plans: PlanProbs[] = [
       en: "The Bronze Plan gives you a safe entry point into the legal world with simple costs and approved protection.",
       ar: "الباقة البرونزية تمنحك بداية آمنة في عالم القانون، بتكلفة بسيطة وحماية معتمدة.",
     },
-    Image: "bronzeshield.png",
+    Image: "Subscription Bronze.png",
   },
 ];

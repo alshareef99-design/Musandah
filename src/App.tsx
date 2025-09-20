@@ -26,6 +26,7 @@ import { FrequentQuestions } from "./pages/FrequentQuestions.tsx";
 // import TimedPopup from './components/SubscribeNow.tsx'
 import { Toaster } from "./components/ui/toaster.tsx";
 import { ViewAllArtciles } from "./components/knowledge_components/ViewAllArtciles.tsx";
+import { WhyUs } from "./pages/WhyUs";
 
 function App() {
   const { direction } = useLanguage();
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/why-us" element={<WhyUs />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetails />} />
             <Route path="/knowledge-center" element={<KnowledgeCenter />} />

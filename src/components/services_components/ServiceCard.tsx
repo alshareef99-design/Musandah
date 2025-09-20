@@ -68,24 +68,24 @@ export const ServiceCard = ({ plan }: ServiceCardProps) => {
         </Box>
       </VStack>
 
-      <Image src={plan.Image} alt={plan.title.en} w="6rem" h="8.5rem" />
-      <Text>{ lang === "en" ? plan.title.en : plan.title.ar}</Text>
+      <Image src={plan.Image} alt={plan.title.en} w="6rem" h="8.5rem" objectFit="contain" />
+      <Text fontSize="lg" fontWeight="bold" mb="1rem">{ lang === "en" ? plan.title.en : plan.title.ar}</Text>
 
-      <VStack align="start">
-        <VStack align="start">
+      <VStack align="start" gap="1.5rem" w="100%">
+        <VStack align="start" gap="0.5rem">
           {plan.description.map((description, index) => (
-            <HStack key={index}>
+            <HStack key={index} gap="0.5rem">
               <Circle size="10px" bgColor="rgba(152, 28, 32, 1)" />
-              <Text fontWeight={300}>{ lang === "en" ? description.en : description.ar}</Text>
+              <Text fontWeight={300} fontSize="sm">{ lang === "en" ? description.en : description.ar}</Text>
             </HStack>
           ))}
         </VStack>
 
-        <VStack align="start">
+        <VStack align="start" gap="0.5rem">
           {plan.features.map((feature, index) => (
-            <HStack key={index}>
+            <HStack key={index} gap="0.5rem">
               <Image w="1rem" src="servicescale.png" alt="servicescale" />
-              <Text fontWeight={300}>{ lang === "en" ? feature.en : feature.ar}</Text>
+              <Text fontWeight={300} fontSize="sm">{ lang === "en" ? feature.en : feature.ar}</Text>
             </HStack>
           ))}
         </VStack>

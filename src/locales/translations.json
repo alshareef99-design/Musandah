@@ -56,6 +56,10 @@
       "en": "Phone number",
       "ar": "رقم الهاتف"
     },
+    "phoneNumber": {
+      "en": "920015419",
+      "ar": "920015419"
+    },
     "msg": {
       "en": "Message",
       "ar": "الرسالة"
