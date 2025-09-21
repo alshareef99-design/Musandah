@@ -171,7 +171,7 @@ export const ContactSection = ()=>{
           <HStack
             flexDir={{ base: "column", md: "row" }}
             zIndex={4}
-            justifyContent={"space-around"}
+            justifyContent={"flex-end"}
             align={"stretch"}
             mt={"2rem"}
             mb={"2rem"}
@@ -180,6 +180,7 @@ export const ContactSection = ()=>{
             overflow={"hidden"}
             gap={4}
           >
+            {false && (
             <VStack
               bgColor={"white"}
               borderRadius={"2xl"}
@@ -192,17 +193,17 @@ export const ContactSection = ()=>{
                   <HStack width={"100%"} gap={4}>
                     <VStack w={"50%"} align={"start"} gap={2}>
                       <Field.Label>{useTranslation("shared.fullname")}</Field.Label>
-                      <Input borderRadius={"2xl"} p={4} />
+                      <Input borderRadius={"2xl"} p={1} />
                     </VStack>
-                    <VStack w={"50%"} align={"start"} gap={2}>
+                    <VStack w={"50%"} align={"start"} gap={1}>
                       <Field.Label>{useTranslation("shared.email")}</Field.Label>
                       <Input borderRadius={"2xl"} p={4} />
                     </VStack>
                   </HStack>
 
-                  <VStack align={"start"} gap={2} w={"100%"}>
+                  <VStack align={"start"} gap={1} w={"100%"}>
                     <Field.Label>{useTranslation("shared.phone")}</Field.Label>
-                    <HStack width={"100%"} gap={2}>
+                    <HStack width={"100%"} gap={1}>
                       {/* Country dropdown */}
                       <Select.Root
                         collection={collection}
@@ -218,7 +219,7 @@ export const ContactSection = ()=>{
                       >
                         <Select.HiddenSelect />
                         <Select.Control>
-                          <Select.Trigger bgColor={"white"} borderRadius={"2xl"} p={4}>
+                          <Select.Trigger bgColor={"white"} borderRadius={"2xl"} p={2}>
                             <Select.ValueText placeholder="Code" />
                           </Select.Trigger>
                           <Select.IndicatorGroup>
@@ -289,10 +290,12 @@ export const ContactSection = ()=>{
                 </Field.Root>
               </Group>
             </VStack>
+            )}
             <VStack
               align={{base:"center", lg:"start"}}
               h={"100%"}
-              w={{ base: "90%", md: "50%" , xl: "45%" }}
+              w={{ base: "90%", md: "100%" , xl: "100%" }}
+              pr={{base:"0rem", lg:"4rem"}}
             >
               <Box textAlign={"start"}>
                 <Box>
