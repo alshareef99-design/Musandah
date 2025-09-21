@@ -59,12 +59,12 @@ export const ContactSection = ()=>{
         border="1px solid #ddd"
         // left={0}
         zIndex={10}
-        pt={"2rem"}
-        pb={"2rem"}
-        pr={{base:"0.5rem",lg:"6.5rem"}}
-        pl={{base:"0.5rem",lg:"6.5rem"}}
+        pt={"1rem"}
+        pb={"1rem"}
+        pr={{base:"0.5rem",lg:"4rem"}}
+        pl={{base:"0.5rem",lg:"4rem"}}
         w="100%"
-        minH="60vh"
+        minH="auto"
         align={"start"}
         color={"rgba(46, 54, 81, 1)"}
         dir={lang === 'ar' ? 'rtl' : 'ltr'}
@@ -87,7 +87,7 @@ export const ContactSection = ()=>{
           w={"100%"}
           p={2}
         >
-          <VStack>
+          {/* <VStack>
             <Box display="inline-block">
               <Text fontSize={{ base: "1rem", md: "1.75rem" }}>
                 {useTranslation("shared.ContactTitle")}
@@ -111,9 +111,9 @@ export const ContactSection = ()=>{
                 </svg>
               </Box>
             </Box>
-          </VStack>
-          <VStack align={"start"} gap={4}>
-            {useTranslation("shared.ContactsubTitle")
+          </VStack> */}
+            <VStack align={"start"} gap={4}>
+            {false && useTranslation("shared.ContactsubTitle")
               .split("\n")
               .filter((l) => l.trim().length > 0)
               .map((line, idx) => {
@@ -173,103 +173,116 @@ export const ContactSection = ()=>{
             zIndex={4}
             justifyContent={"space-around"}
             align={"stretch"}
-            mt={"3rem"}
+            mt={"2rem"}
+            mb={"2rem"}
             w={{base:"100vw",lg:"100%"}}
             maxW={"100vw"}
             overflow={"hidden"}
+            gap={4}
           >
             <VStack
               bgColor={"white"}
               borderRadius={"2xl"}
-              justifyContent={"space-around"}
+              p={6}
+              gap={4}
               width={{ base: "90%", md: "40%" , xl: "45%" }}
-
             >
-              <Group  maxW={"90%"} w={{ base: "md",  xl: "xl" }} attached>
+              <Group maxW={"100%"} w={"100%"} attached>
                 <Field.Root>
-                  <HStack width={"100%"}>
-                    <VStack w={"50%"} align={"start"}>
+                  <HStack width={"100%"} gap={4}>
+                    <VStack w={"50%"} align={"start"} gap={2}>
                       <Field.Label>{useTranslation("shared.fullname")}</Field.Label>
-                      <Input borderRadius={"2xl"} />
+                      <Input borderRadius={"2xl"} p={4} />
                     </VStack>
-                    <VStack w={"50%"} align={"start"}>
+                    <VStack w={"50%"} align={"start"} gap={2}>
                       <Field.Label>{useTranslation("shared.email")}</Field.Label>
-                      <Input borderRadius={"2xl"} />
+                      <Input borderRadius={"2xl"} p={4} />
                     </VStack>
                   </HStack>
 
-                  <Field.Label>{useTranslation("shared.phone")}</Field.Label>
-                  <HStack   width={"100%"} gap={2}>
-                    {/* Country dropdown */}
-                    <Select.Root
-                      collection={collection}
-                      size="sm"
-                      width="8rem"
-                      bgColor={"transparent"}
-                      value={[selectedCode]}
-                      onValueChange={(details) => {
-                        // details.value is always an array
-                        const selected = details.value[0];
-                        setSelectedCode(selected);
-                      }}
-                    >
-                      <Select.HiddenSelect />
-                      <Select.Control>
-                        <Select.Trigger  bgColor={"white"}>
-                          <Select.ValueText   placeholder="Code" />
-                        </Select.Trigger>
-                        <Select.IndicatorGroup>
-                          <Select.Indicator />
-                        </Select.IndicatorGroup>
-                      </Select.Control>
-                      <Portal>
-                        <Select.Positioner>
-                          <Select.Content bgColor={"white"}>
-                            {collection.items.map((item) => (
-                              <Select.Item                       
-                              key={item.value} item={item}>
-                                { item.label}
-                                <Select.ItemIndicator />
-                              </Select.Item>
-                            ))}
-                          </Select.Content>
-                        </Select.Positioner>
-                      </Portal>
-                    </Select.Root>
+                  <VStack align={"start"} gap={2} w={"100%"}>
+                    <Field.Label>{useTranslation("shared.phone")}</Field.Label>
+                    <HStack width={"100%"} gap={2}>
+                      {/* Country dropdown */}
+                      <Select.Root
+                        collection={collection}
+                        size="sm"
+                        width="8rem"
+                        bgColor={"transparent"}
+                        value={[selectedCode]}
+                        onValueChange={(details) => {
+                          // details.value is always an array
+                          const selected = details.value[0];
+                          setSelectedCode(selected);
+                        }}
+                      >
+                        <Select.HiddenSelect />
+                        <Select.Control>
+                          <Select.Trigger bgColor={"white"} borderRadius={"2xl"} p={4}>
+                            <Select.ValueText placeholder="Code" />
+                          </Select.Trigger>
+                          <Select.IndicatorGroup>
+                            <Select.Indicator />
+                          </Select.IndicatorGroup>
+                        </Select.Control>
+                        <Portal>
+                          <Select.Positioner>
+                            <Select.Content bgColor={"white"}>
+                              {collection.items.map((item) => (
+                                <Select.Item                       
+                                key={item.value} item={item}>
+                                  { item.label}
+                                  <Select.ItemIndicator />
+                                </Select.Item>
+                              ))}
+                            </Select.Content>
+                          </Select.Positioner>
+                        </Portal>
+                      </Select.Root>
 
-                    {/* Phone number input */}
-                    <Input
-                      borderRadius="2xl"
-                      placeholder={`${country.value}xxxxxxxxx`}
-                      value={number}
-                      onChange={(e) => setNumber(e.target.value)}
-                    />
-                  </HStack>
-
-                  <Field.Label>{useTranslation("shared.msg")}</Field.Label>
-                  <Input borderRadius={"2xl"} />
-                  <RadioGroup.Root maxW={"100%"} defaultValue="1">
-                    <HStack gap="6" align={"center"} alignItems={"end"} flexDir={{base:"column",md:"row"}}>
-                      {items.map((item) => (
-
-                        <RadioGroup.Item key={item.value} value={item.value}>
-                          <RadioGroup.ItemText>
-                            {lang === "ar" ? item.label.ar : item.label.en}
-                          </RadioGroup.ItemText>
-
-                          <RadioGroup.ItemHiddenInput />
-                          <RadioGroup.ItemIndicator />
-                        </RadioGroup.Item>
-                      ))}
+                      {/* Phone number input */}
+                      <Input
+                        borderRadius="2xl"
+                        placeholder={`${country.value}xxxxxxxxx`}
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                        p={4}
+                        flex={1}
+                      />
                     </HStack>
-                  </RadioGroup.Root>
+                  </VStack>
 
-                  {/* <Box pos="relative" w="full"></Box> */}
+                  <VStack align={"start"} gap={2} w={"100%"}>
+                    <Field.Label>{useTranslation("shared.msg")}</Field.Label>
+                    <Input borderRadius={"2xl"} p={4} minH={"120px"} />
+                  </VStack>
+                  
+                  <VStack align={"start"} gap={2} w={"100%"}>
+                    <RadioGroup.Root maxW={"100%"} defaultValue="1">
+                      <HStack gap="6" align={"center"} alignItems={"end"} flexDir={{base:"column",md:"row"}}>
+                        {items.map((item) => (
+                          <RadioGroup.Item key={item.value} value={item.value}>
+                            <RadioGroup.ItemText>
+                              {lang === "ar" ? item.label.ar : item.label.en}
+                            </RadioGroup.ItemText>
+                            <RadioGroup.ItemHiddenInput />
+                            <RadioGroup.ItemIndicator />
+                          </RadioGroup.Item>
+                        ))}
+                      </HStack>
+                    </RadioGroup.Root>
+                  </VStack>
+
                   <Box
                     as="button"
                     bgColor={"rgba(90, 119, 187, 1)"}
                     color={"white"}
                     width={"100%"}
+                    p={4}
+                    borderRadius={"2xl"}
+                    fontSize={"1.1rem"}
+                    fontWeight={500}
+                    _hover={{ bgColor: "rgba(90, 119, 187, 0.9)" }}
                   >
                     {useTranslation("shared.send")}
                   </Box>

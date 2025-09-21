@@ -286,6 +286,15 @@ export const Home = () => {
                 {useTranslation("home.whyus.subtitle4")}
               </Text>
             </HStack>
+            <Text
+              textAlign={"start"}
+              fontWeight={400}
+              fontSize={"1.2rem"}
+              color={"#5F6166"}
+              mt={"2rem"}
+            >
+              {useTranslation("home.whyus.subtitle5")}
+            </Text>
           </VStack>
         </VStack>
         <VStack
@@ -349,7 +358,7 @@ export const Home = () => {
         >
           {
             lang === "ar" ? `في مركز المساندة القانونية، نوفر لك باقات قانونية مصممة لتلائم احتياجاتك.
-اختر الباقة التي تناسبك.. وابق دائمًا في أمان قانوني
+اختر الباقة التي تناسبك.. وابق دائمًا في أمان قانوني.
 ` :
               `
           At Musanadah, we have designed legal packages that cover your various needs — from basic support to comprehensive coverage. Choose the package that suits you and always be legally secure.`
@@ -392,23 +401,27 @@ export const Home = () => {
             Musanadah is not just a platform... but your digital legal companion, designed to be on your side.`
             }
           </Text>
-          <Text
-            fontSize={{ base: "1rem", md: "1.25rem" }}
-            fontWeight={400}
-            whiteSpace="pre-line"
-            lineClamp={expanded === "text2" ? undefined : 3}
-          >
-            {text2}
-          </Text>
-          <Box
-            as="button"
-            bg="transparent"
-            color="blue.600"
-            mt={2}
-            onClick={() => setExpanded(expanded === "text2" ? null : "text2")}
-          >
-            {expanded === "text2" ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
-          </Box>
+          {false && (
+            <>
+              <Text
+                fontSize={{ base: "1rem", md: "1.25rem" }}
+                fontWeight={400}
+                whiteSpace="pre-line"
+                lineClamp={expanded === "text2" ? undefined : 3}
+              >
+                {text2}
+              </Text>
+              <Box
+                as="button"
+                bg="transparent"
+                color="blue.600"
+                mt={2}
+                onClick={() => setExpanded(expanded === "text2" ? null : "text2")}
+              >
+                {expanded === "text2" ? useTranslation("shared.readless") : useTranslation("shared.readmore")}
+              </Box>
+            </>
+          )}
           <Box
             as="button"
             color={"white"}

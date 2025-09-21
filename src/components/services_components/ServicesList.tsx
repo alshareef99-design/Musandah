@@ -174,13 +174,13 @@ export const plans: PlanProbs[] = [
         ar: "20 دقيقة مدة الاستشارة",
       },
       {
-        en: "Annual price: SAR 199",
-        ar: "سعر الباقة: 199 ريال سنويًا",
+        en: "Annual price: SAR 95",
+        ar: "سعر الباقة: 95 ريال سنويًا",
       },
     ],
     price: {
-      en: "199",
-      ar: "199",
+      en: "95",
+      ar: "95",
     },
     whofor: [
       // {

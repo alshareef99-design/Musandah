@@ -117,7 +117,7 @@
     "designedforyou": {
       "title": {
         "en": " Musandah was designed to be:",
-        "ar": "صُممت خدمات مركز المساندة القانونية' وُجدت لتكون:"
+        "ar": "صُممت خدمات  'مركز المساندة القانونية' وُجدت لتكون:"
       },
       "cards": [
         {
@@ -186,7 +186,7 @@
         "en": "Why Us?"
       },
       "paragraph": {
-        "ar": "لأن العدالة يجب أن تكون أقرب وأسهل للجميع، صممنا تجربة تُقرّب القانون، وتبسّط اللغة، وتُوازن التكلفة.. وكل ذلك عبر منصة واحدة فقط!\n\nمع مركز المساندة القانونية، القانون أقرب إليك.. القانون في جيبك.",
+        "ar": "لأن العدالة يجب أن تكون أقرب وأسهل للجميع، صممنا تجربة تُقرّب القانون، وتبسّط اللغة، وتُوازن التكلفة.. وكل ذلك عبر منصة واحدة فقط!",
         "en": "            We make the law closest, the language clear, the cost reasonable, and access doesn't require more than a phone call."
       },
       "subtitle": {
@@ -202,14 +202,19 @@
         "en": "Legal consultations and court representation under a licensed legal partner"
       },
       "subtitle3": {
-        "ar": "دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة",
+        "ar": "دعم بعدة لغات لأن القانون لا يجب أن يُحصر في لغة واحدة.",
         "en": "Multilingual support — because justice shouldn’t be bound by language"
       },
       "subtitle4": {
-        "ar": "تكامل مباشر مع 'نفاذ' لتسهيل الإجراءات",
+        "ar": "تكامل مباشر مع 'نفاذ' لتسهيل الإجراءات.",
         "en": "Direct integration with ''Nafath'', ''Najiz'', and ''Absher'' to simplify procedures"
+      },
+      "subtitle5": {
+        "ar": "مع مركز المساندة القانونية، القانون أقرب إليك.. القانون في جيبك.",
+        "en": "With Legal Support Center, the law is closer to you.. the law in your pocket."
       }
     },
+
     "infopart": {
       "subtitle1": {
         "en": " At Musanadah, we don’t just offer solutions — we make sure you understand the reasoning behind them. ",
@@ -232,7 +237,7 @@
     },
     "musanadah": {
       "title": {
-        "ar": "مساندة",
+        "ar": "مركز المساندة القانونية",
         "en": "Musanadah"
       },
       "text": {
@@ -295,8 +300,8 @@
         ,"ar":"باقاتنا تتوسع... خطوة بخطوة"
       },
       "expandingsubtitle":{
-        "en":"At Musanadah, we don’t believe in launching everything at once. We grow thoughtfully and in phases — starting with the most essential and widely needed services, and gradually expanding to serve all segments of society.",
-      "ar":"نحن في 'مركز المساندة القانونية'  لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة، بدأنا بالباقات الأساسية الأكثر طلبًا.\n بدأنا بالباقات الأساسية التي تغطي الاستشارات العمالية والأحوال الشخصية، والمرورية لكونها الأكثر حضورًا في واقع الأفراد."
+        "en":"At Musanadah, we don't believe in launching everything at once. We grow thoughtfully and in phases — starting with the most essential and widely needed services, and gradually expanding to serve all segments of society.",
+      "ar":"نحن في 'مركز المساندة القانونية'  لا نؤمن بالإطلاق الكلي العشوائي، بل نعمل وفق خطة نمو تدريجية مدروسة، بدأنا بالباقات الأساسية الأكثر طلبًا.\n بدأنا بالباقات الأساسية التي تغطي الاستشارات العمالية والأحوال الشخصية، والمرورية لكونها الأكثر حضورًا في واقع الأفراد.\n\nفي مركز المساندة القانونية، خدماتنا لا تنمو بالعدد فقط.. بل بفهم أعمق لكل ما يحتاجه الناس من القانون ليكون دائمًا في صفهم."
       },
 
     "info":{

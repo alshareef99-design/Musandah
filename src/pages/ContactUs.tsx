@@ -27,14 +27,14 @@ export const Contact = () => {
             fontWeight={600}
             color={"rgba(46, 54, 81, 1)"}
           >
-            {lang === "en" ? "Contact Us ... we don't just listen, we understand you" : " تواصل معنا... لأننا لا نكتفي بالاستماع، بل نفهم"}
+            {lang === "en" ? "Contact Us ... we don't just listen, we understand you" : " تواصل معنا.. لأننا هنا من أجل أن نفهمك ونوجّهك"}
           </Text>
           <Text
             fontSize={"1.5rem"}
             fontWeight={400}
             color={"rgba(46, 54, 81, 1)"}
           >
-            {lang === "ar" ? "ولهذا، صممنا طرق التواصل لتكون:" : "That's why we designed communication channels to be:"}
+            {lang === "ar" ? "في مركز المساندة القانونية، لا يوجد سؤال صغير أو استفسار تافه. كل رسالة منك تعني شيئًا واحدًا: أنت تبحث عن فهم، دعم، أو طمأنينة قانونية.\n\nلذلك، طرق التواصل معنا صُممت لتكون سهلة، سريعة، وآمنة، بلا تعقيد، وبأسلوب يحترم خصوصيتك ووقتك." : "That's why we designed communication channels to be:"}
           </Text>
         </>
 

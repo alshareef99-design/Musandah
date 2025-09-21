@@ -28,12 +28,12 @@ export const About = () => {
       />
 
       {/* Headline */}
-      <Text
+      {/* <Text
         fontSize={{ base: "1.5rem", lg: "2rem" }}
         color={"rgba(46, 54, 81, 1)"}
       >
         {useTranslation("aboutPage.headline")}
-      </Text>
+      </Text> */}
 
       <VStack gap={8} w={"90vw"}>
         {/* Musanadah Section */}
