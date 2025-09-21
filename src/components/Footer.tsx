@@ -40,6 +40,7 @@ export const Footer: FC = () => {
       display={"flex"}
       w={"100vw"}
     >
+      {false && (
       <HStack
         // minW={"100vw"}
         w={"100%"}
@@ -53,14 +54,14 @@ export const Footer: FC = () => {
          textAlign={"start"} align={"start"} p={6}
          w={{ base: "100%", md: "40%" }}
        >
-          <Text fontSize={"1.75rem"} fontWeight={"600"}>
+          {/* <Text fontSize={"1.75rem"} fontWeight={"600"}>
             {lang === "en" ? "More news" : " المزيد من الأخبار"}
           </Text>
           <Text fontSize={"1.1rem"} fontWeight={"400"}>
             {lang === "en"
               ? "Be the first who knows the latest news, org updates, and exclusive offers from our platform"
               : "كن أول من يعرف آخر الأخبار القانونية، التحديثات التنظيمية، والعروض الحصرية من منصتنا"}
-          </Text>
+          </Text> */}
         </VStack>
         <Group attached w={{ base: "100%", md: "50%" }} maxW="xl" minH={"15rem"} >
           <Input minH={"90px"} border={"none"} fontSize={"1.2rem"} borderRadius={"2xl"} bgColor={"rgba(255, 255, 255, 0.1)"} flex="1" placeholder={lang === "en" ? "Enter your email" : "ادخل بريدك الالكتروني"} />
@@ -69,6 +70,7 @@ export const Footer: FC = () => {
           </Box>
         </Group>
       </HStack>
+      )}
       <HStack
         w={"100%"}
         mt="auto"
