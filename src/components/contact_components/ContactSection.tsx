@@ -12,7 +12,7 @@ import {
   Select,
   Field,
 } from "@chakra-ui/react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -318,6 +318,20 @@ export const ContactSection = ()=>{
                   {" "}
                   support@lsc-sa.net
                 </Text>
+                <Link
+                  href="mailto:support@lsc-sa.net?subject=LSC%20Support%20Inquiry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <HStack p={4} gap={2} _hover={{ opacity: 0.9 }}>
+                    <Circle size={"2rem"} bgColor="#5A77BB">
+                      <FaEnvelope color="#fff" />
+                    </Circle>
+                    <Text fontSize={"1rem"} fontWeight={500} color={"rgba(95, 97, 102, 1)"}>
+                      {lang === 'ar' ? 'راسلنا عبر البريد' : 'Email us'}
+                    </Text>
+                  </HStack>
+                </Link>
               </Box>
 
               <Box textAlign={"start"}>
@@ -341,6 +355,20 @@ export const ContactSection = ()=>{
                   {" "}
                   {useTranslation("shared.phoneNumber")}
                 </Text>
+                <Link
+                  href="https://wa.me/966920015419"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <HStack p={4} gap={2} _hover={{ opacity: 0.9 }}>
+                    <Circle size={"2rem"} bgColor="#25D366">
+                      <FaWhatsapp color="#fff" />
+                    </Circle>
+                    <Text fontSize={"1rem"} fontWeight={500} color={"rgba(95, 97, 102, 1)"}>
+                      {lang === 'ar' ? 'تواصل عبر واتساب' : 'Contact via WhatsApp'}
+                    </Text>
+                  </HStack>
+                </Link>
               </Box>
 
               <Box textAlign={"start"}>
